@@ -25,11 +25,12 @@ public class Product {
         private LocalDate dateCreated;
         private LocalDate dateUpdated;
 
+        //build() method for creating Product instances
         public Product build() {
             return new Product(this);
         }
 
-        // Builder setter methods
+        // Builder setter methods/Builder methods with method chaining
         public Builder id(String id) {
             this.id = id;
             return this;
