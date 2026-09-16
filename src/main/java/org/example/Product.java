@@ -15,7 +15,6 @@ public class Product {
     private LocalDate dateCreated;
     private LocalDate dateUpdated;
 
-
     //Nested class Builder
     public static class Builder {
         // Builder-fälten
@@ -25,6 +24,33 @@ public class Product {
         private int rating;
         private LocalDate dateCreated;
         private LocalDate dateUpdated;
+
+        // Builder setter methods
+        public Builder id(String id) {
+            this.id = id;
+            return this;
+        }
+        public Builder name(String name) {
+            this.name = name;
+            return this;
+        }
+        public Builder category(Category category) {
+            this.category = category;
+            return this;
+        }
+        public Builder rating(int rating) {
+            this.rating = rating;
+            return this;
+        }
+        public Builder dateCreated(LocalDate dateCreated) {
+            this.dateCreated = dateCreated;
+            return this;
+        }
+        public Builder dateUpdated(LocalDate dateUpdated) {
+            this.dateUpdated = dateUpdated;
+            return this;
+        }
+
     }
 
     //Origin produkt Konstruktorn -> private
@@ -36,6 +62,4 @@ public class Product {
         this.dateCreated = builder.dateCreated;
         this.dateUpdated = builder.dateUpdated;
     }
-
-
 }
