@@ -69,4 +69,23 @@ public class Product {
             this.dateCreated = builder.dateCreated;
             this.dateUpdated = builder.dateUpdated;
         }
+        //Getter methods
+        public String getId() {
+        return id;
+        }
+        public String getName() {
+        return name;
+        }
+        public Category getCategory() {
+        return category;
+        }
+        public int getRating() {
+        return rating;
+        }
+        public LocalDate getDateCreated() {
+        return dateCreated;
+        }
+        public LocalDate getDateUpdated(){
+        return dateUpdated;
+        }
     }
