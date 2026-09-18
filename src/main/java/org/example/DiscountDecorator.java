@@ -5,10 +5,12 @@ import java.math.BigDecimal;
 public class DiscountDecorator extends ProductDecorator {
 
     //Field to store the discount percentage
-    private double discountPercentage;
+    private BigDecimal discountPercentage;
 
     //Constructor to initialize the decorated product and discount percentage
-    public DiscountDecorator(Sellable decoratedProduct, double discountPercentage) {
+    public DiscountDecorator(
+            Sellable decoratedProduct,
+            BigDecimal discountPercentage) {
         super(decoratedProduct);
         this.discountPercentage = discountPercentage;
     }
@@ -17,7 +19,7 @@ public class DiscountDecorator extends ProductDecorator {
         @Override
         public BigDecimal getPrice () {
             BigDecimal originalPrice = decoratedProduct.getPrice();
-            BigDecimal discount = BigDecimal.valueOf(discountPercentage)
+            BigDecimal discount = discountPercentage
                     .divide(BigDecimal.valueOf(100));
             BigDecimal discountAmount = originalPrice.multiply(discount);
             return originalPrice.subtract(discountAmount);

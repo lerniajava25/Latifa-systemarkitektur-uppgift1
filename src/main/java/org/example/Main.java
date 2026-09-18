@@ -19,7 +19,8 @@ public class Main {
                 .price(new BigDecimal("1000"))
                 .build();
 
-        Sellable discountedProduct = new DiscountDecorator(product, 20);
+        Sellable discountedProduct =
+                new DiscountDecorator(product, new BigDecimal("20"));
 
         IO.println("Original price: " + product.getPrice());
         IO.println("Discounted price: " + discountedProduct.getPrice());

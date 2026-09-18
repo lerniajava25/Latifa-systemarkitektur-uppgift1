@@ -31,6 +31,10 @@ public class Product implements Sellable {
 
         //build() method for creating Product instances
         public Product build() {
+            if (price == null) {
+                throw new IllegalStateException("Price is required");
+            }
+
             return new Product(this);
         }
 

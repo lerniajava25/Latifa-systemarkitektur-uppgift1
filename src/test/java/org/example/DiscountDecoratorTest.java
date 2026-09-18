@@ -17,7 +17,8 @@ public class DiscountDecoratorTest {
                 .price(new BigDecimal("1000"))
                 .build();
         //Act
-        Sellable discountedLaptop = new DiscountDecorator(laptop, 20);
+        Sellable discountedLaptop =
+                new DiscountDecorator(laptop, new BigDecimal("20"));
         //Assert controller
         assertEquals("id1", discountedLaptop.getId());
         assertEquals("Laptop", discountedLaptop.getName());
