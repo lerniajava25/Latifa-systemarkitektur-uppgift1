@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 //Create abstract class ProductDecorator that implements Sellable interface
 public abstract class ProductDecorator implements Sellable {
 
-    //Fält
+    //Field to store the decorated product
     protected Sellable decoratedProduct;
 
     // Constructor to wrap a Sellable product
@@ -13,6 +13,7 @@ public abstract class ProductDecorator implements Sellable {
         this.decoratedProduct = decoratedProduct;
     }
 
+    //Implement interface methods by delegating the calls to the decorated product
     @Override
     public String getName() {
         return decoratedProduct.getName();
