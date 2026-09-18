@@ -1,5 +1,6 @@
 package org.example;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public class Product {
@@ -14,6 +15,8 @@ public class Product {
     private int rating;
     private LocalDate dateCreated;
     private LocalDate dateUpdated;
+    private BigDecimal price;
+
 
     //Nested class Builder
     public static class Builder {
@@ -24,6 +27,7 @@ public class Product {
         private int rating;
         private LocalDate dateCreated;
         private LocalDate dateUpdated;
+        private BigDecimal price;
 
         //build() method for creating Product instances
         public Product build() {
@@ -60,6 +64,11 @@ public class Product {
             this.dateUpdated = dateUpdated;
             return this;
         }
+
+        public Builder price(BigDecimal price) {
+            this.price = price;
+            return this;
+        }
     }
         //Origin produkt Konstruktorn -> private
         private Product(Builder builder) {
@@ -69,6 +78,7 @@ public class Product {
             this.rating = builder.rating;
             this.dateCreated = builder.dateCreated;
             this.dateUpdated = builder.dateUpdated;
+            this.price = builder.price;
         }
         //Getter methods
         public String getId() {
@@ -88,5 +98,8 @@ public class Product {
         }
         public LocalDate getDateUpdated(){
         return dateUpdated;
+        }
+        public BigDecimal getPrice() {
+            return price;
         }
     }

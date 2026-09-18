@@ -1,5 +1,6 @@
 package org.example;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -15,6 +16,7 @@ public class Main {
                 .rating(8)
                 .dateCreated(LocalDate.now())
                 .dateUpdated(LocalDate.now())
+                .price(new BigDecimal("1000"))
                 .build();
 
     }
