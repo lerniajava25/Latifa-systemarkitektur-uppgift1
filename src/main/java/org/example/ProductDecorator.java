@@ -28,7 +28,4 @@ public abstract class ProductDecorator implements Sellable {
         return decoratedProduct.getPrice();
     }
 
-
-
-
 }
