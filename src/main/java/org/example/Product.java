@@ -3,7 +3,7 @@ package org.example;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-public class Product {
+public class Product implements Sellable {
     public enum Category {
         TOOLS
     }
